@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <div class="chessboard-wrapper">
-      <chessboard @square-clicked="handleSquareClicked" />
+      <chessboard @onSquareClick="handleSquareClicked" />
     </div>
     <sidebar :clicked-squares="clickedSquares" />
   </div>
@@ -22,8 +22,8 @@ export default {
     };
   },
   methods: {
-    handleSquareClicked(square) {
-      this.clickedSquares.push(square);
+    handleSquareClicked(squares) {
+      this.clickedSquares = squares;
     },
   },
 };

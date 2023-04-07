@@ -27,9 +27,7 @@ export default {
     onSquareClick(index) {
       this.numberOfClicks++;
       this.selectedSquare = index;
-      this.selectedSquares.push(
-        `${this.numberOfClicks}. ${this.convertSquareToCordinate(index + 1)}`
-      );
+      this.selectedSquares.push(this.convertSquareToCordinate(index + 1));
       this.$emit("onSquareClick", this.selectedSquares);
     },
 
