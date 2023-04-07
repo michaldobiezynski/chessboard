@@ -70,7 +70,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 li {
   flex-basis: 12.5%;
@@ -120,6 +119,8 @@ li:nth-child(even).odd {
 }
 
 #chessboard-list {
+  background-color: #333;
+
   display: flex;
   justify-content: stretch;
   align-items: stretch;
@@ -134,9 +135,9 @@ li:nth-child(even).odd {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
   #chessboard-list {
-    width: 95vw;
-    height: 95vw;
-    margin: 20px;
+    width: 80vw;
+    height: 80vw;
+    margin: 8px;
   }
 }
 </style>
