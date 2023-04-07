@@ -1,15 +1,12 @@
 <template>
   <div id="app">
     <div class="flex-container">
-      <div class="flex-column">
-        <p>
-          Click on a square to see the coordinates of the square in the sidebar.
-        </p>
+      <div class="flex-column chessboard-column">
         <div class="chessboard-wrapper">
           <chessboard @onSquareClick="handleSquareClicked" />
         </div>
       </div>
-      <div class="flex-column">
+      <div class="flex-column sidebar-column">
         <sidebar :clicked-squares="clickedSquares" />
       </div>
     </div>
@@ -37,6 +34,7 @@ export default {
   },
 };
 </script>
+
 <style>
 html,
 body {
@@ -63,7 +61,6 @@ p {
   flex-grow: 1;
   height: 100%;
   width: 100%;
-  background-color: #e0e0e0;
 }
 
 .flex-column {
@@ -71,7 +68,14 @@ p {
   flex-direction: column;
   flex-grow: 1;
   height: 100%;
+}
+
+.chessboard-container {
   background-color: #504f4b;
+}
+
+.sidebar-container {
+  background-color: #3e3d39;
 }
 
 .chessboard-wrapper {
@@ -81,7 +85,16 @@ p {
 @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
   .flex-container {
     flex-direction: column;
-    justify-content: center;
+  }
+
+  .chessboard-container {
+    order: 2;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .sidebar-container {
+    order: 1;
   }
 }
 
@@ -89,11 +102,18 @@ p {
   #app {
     flex-direction: row;
   }
-  .chessboard-wrapper {
+
+  .chessboard-container {
     flex-basis: 0;
     flex-grow: 1;
     padding-bottom: 0;
-    height: 100%;
+  }
+
+  .sidebar-container {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 </style>
