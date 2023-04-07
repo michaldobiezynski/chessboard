@@ -28,11 +28,38 @@ export default {
   },
 };
 </script>
+<style>
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Arial", sans-serif;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.chessboard-wrapper {
+  position: relative;
+  flex-grow: 1;
+  padding-bottom: 100%;
+}
+
+@media (min-width: 768px) {
+  .app {
+    flex-direction: row;
+  }
+  .chessboard-wrapper {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding-bottom: 0;
+    height: 100%;
+  }
 }
 </style>
