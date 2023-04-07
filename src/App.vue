@@ -1,25 +1,33 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="app">
+    <div class="chessboard-wrapper">
+      <chessboard @square-clicked="handleSquareClicked" />
+    </div>
+    <sidebar :clicked-squares="clickedSquares" />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script>
+import Chessboard from "./components/Chessboard.vue";
+import Sidebar from "./components/Sidebar.vue";
+
+export default {
+  components: {
+    Chessboard,
+    Sidebar,
+  },
+  data() {
+    return {
+      clickedSquares: [],
+    };
+  },
+  methods: {
+    handleSquareClicked(square) {
+      this.clickedSquares.push(square);
+    },
+  },
+};
+</script>
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
