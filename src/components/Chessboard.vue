@@ -123,10 +123,8 @@ li:nth-child(even).odd {
   display: flex;
   justify-content: stretch;
   align-items: stretch;
-  max-height: 85vh;
-  max-width: 85vh;
-  width: 50vw;
-  height: 50vw;
+  width: 40vw;
+  height: 40vw;
   flex-wrap: wrap;
   align-self: center;
   margin: 20px;
@@ -138,7 +136,7 @@ li:nth-child(even).odd {
   #chessboard-list {
     width: 95vw;
     height: 95vw;
-    margin: 10px 0 0 0;
+    margin: 20px;
   }
 }
 </style>

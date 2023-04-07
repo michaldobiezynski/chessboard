@@ -27,13 +27,18 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: #e5e5e5;
+  background-color: #3e3d39;
   width: 100%;
   height: 100%;
 }
 
 h2 {
   margin-top: 0;
+  color: #fff;
+}
+
+li {
+  color: #fff;
 }
 
 .list-container {
