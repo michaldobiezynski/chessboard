@@ -153,7 +153,7 @@ li:nth-child(even).odd {
 }
 
 /* Media query for smaller devices */
-@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
   /* Reduce the width and height of the chessboard list container */
   #chessboard-list {
     width: 80vw;

@@ -71,7 +71,7 @@ h2 {
 }
 
 /* The following styles are for desktop devices only */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .list-container {
     height: 80vh;
   }

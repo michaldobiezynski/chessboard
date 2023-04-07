@@ -51,6 +51,9 @@ body {
   height: 100%;
   font-family: "Arial", sans-serif;
   background-color: #504f4b;
+  display: flex;
+  place-items: center;
+  justify-content: center;
 }
 
 /* Global styling for paragraphs */
@@ -98,7 +101,7 @@ p {
 }
 
 /* Media queries for mobile devices */
-@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
   /* Flex container to stack chessboard and sidebar columns */
   .flex-container {
     flex-direction: column;
@@ -112,7 +115,7 @@ p {
 }
 
 /* Media queries for desktop devices */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   /* Main app container */
   #app {
     flex-direction: row;
