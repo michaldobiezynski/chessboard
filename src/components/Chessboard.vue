@@ -70,3 +70,75 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+li {
+  flex-basis: 12.5%;
+}
+
+li:nth-child(even).even {
+  background: #779953;
+}
+li:nth-child(odd).odd {
+  background: #779953;
+}
+
+li:nth-child(odd).even {
+  background: #edeed1;
+}
+
+li:nth-child(even).odd {
+  background: #edeed1;
+}
+
+.square {
+  position: relative;
+  list-style-type: none;
+}
+
+.clicked {
+  position: absolute;
+  background-color: #f7f769;
+  width: 100%;
+  height: 100%;
+}
+
+.top-left {
+  border-top-left-radius: 4px;
+}
+
+.top-right {
+  border-top-right-radius: 4px;
+}
+
+.bottom-left {
+  border-bottom-left-radius: 4px;
+}
+
+.bottom-right {
+  border-bottom-right-radius: 4px;
+}
+
+#chessboard-list {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  max-height: 85vh;
+  max-width: 85vh;
+  width: 50vw;
+  height: 50vw;
+  flex-wrap: wrap;
+  align-self: center;
+  margin: 20px;
+  padding: 0;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
+  #chessboard-list {
+    width: 95vw;
+    height: 95vw;
+    margin: 10px 0 0 0;
+  }
+}
+</style>
