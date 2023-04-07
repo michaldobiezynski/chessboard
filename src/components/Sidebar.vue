@@ -2,7 +2,7 @@
   <div class="sidebar">
     <h2>Clicked squares</h2>
     <div class="list-container">
-      <ol class="scrollable-list">
+      <ol>
         <li v-for="(square, index) in clickedSquares" :key="square + index">
           {{ square }}
         </li>
@@ -28,8 +28,6 @@ export default {
   flex-direction: column;
   padding: 1rem;
   background-color: #3e3d39;
-  width: 100%;
-  height: 100%;
 }
 
 h2 {
@@ -45,10 +43,7 @@ li {
   flex-grow: 1;
   overflow-y: auto;
   margin-bottom: 2rem;
-}
-
-.scrollable-list {
-  margin-left: 1.5rem;
-  height: 100%;
+  height: 80vh;
+  width: 100%;
 }
 </style>

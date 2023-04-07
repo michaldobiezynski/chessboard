@@ -75,9 +75,7 @@ p {
 }
 
 .chessboard-wrapper {
-  position: relative;
   flex-grow: 1;
-  padding-bottom: 100%;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
