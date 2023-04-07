@@ -1,8 +1,10 @@
 <template>
   <div class="sidebar">
+    <!-- Sidebar header -->
     <h2>Clicked squares</h2>
     <div class="list-container">
       <div class="list-wrapper">
+        <!-- Square list items -->
         <div
           v-for="(square, index) in clickedSquares"
           :key="square + index"
@@ -18,6 +20,7 @@
 <script>
 export default {
   props: {
+    // An array of clicked squares passed as a prop
     clickedSquares: {
       type: Array,
       default: () => [],
@@ -67,6 +70,7 @@ h2 {
   white-space: nowrap;
 }
 
+/* The following styles are for desktop devices only */
 @media (min-width: 768px) {
   .list-container {
     height: 80vh;
