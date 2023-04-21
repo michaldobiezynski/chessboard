@@ -30,20 +30,19 @@ export default {
 .sidebar {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   background-color: #3e3d39;
 }
 
 h2 {
   margin-top: 0;
   color: #fff;
+  margin: 8px;
 }
 
 .list-container {
   flex-grow: 1;
   overflow-y: auto;
-  margin-bottom: 2rem;
-  height: 20vh;
+  height: min(50vw, 50vh);
   width: 100%;
 }
 

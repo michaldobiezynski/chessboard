@@ -73,10 +73,6 @@ p {
   height: 100%;
 }
 
-.chessboard-container {
-  background-color: #504f4b;
-}
-
 .sidebar-container {
   background-color: #3e3d39;
 }
@@ -85,26 +81,15 @@ p {
   flex-grow: 1;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
+@media only screen and (min-device-width: 280px) and (max-device-width: 600px) {
   .flex-container {
     flex-direction: column;
-  }
-
-  .chessboard-container {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
   }
 }
 
 @media (min-width: 600px) {
   #app {
     flex-direction: row;
-  }
-
-  .chessboard-container {
-    flex-basis: 0;
-    flex-grow: 1;
-    padding-bottom: 0;
   }
 
   .sidebar-container {

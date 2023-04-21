@@ -105,21 +105,21 @@ li:nth-child(even).odd {
   display: flex;
   justify-content: stretch;
   align-items: stretch;
-  width: 40vw;
-  height: 40vw;
+  width: min(60vw, 60vh);
+  height: min(60vw, 60vh);
   flex-wrap: wrap;
   align-self: center;
-  margin: 20px;
+  margin: 0;
   padding: 0;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   overflow: hidden;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
+@media only screen and (min-device-width: 280px) and (max-device-width: 600px) {
   #chessboard-list {
-    width: 80vw;
-    height: 80vw;
+    width: min(70vw, 70vh);
+    height: min(70vw, 70vh);
     margin: 8px;
   }
 }
