@@ -1,14 +1,15 @@
 <template>
-  <ul id="chessboard-list">
-    <li
+  <div id="chessboard">
+    <div
+      class="square-wrapper"
       v-for="(square, index) of squares"
       v-bind:key="index"
       v-bind:class="getSquareClasses(square, index)"
       @click="onSquareClick(index)"
     >
       <div v-if="selectedSquare === index" class="clicked" />
-    </li>
-  </ul>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -68,29 +69,28 @@ export default {
 </script>
 
 <style scoped>
-li {
+.square-wrapper {
   flex-basis: 12.5%;
 }
 
-li:nth-child(even).even {
+.square-wrapper:nth-child(even).even {
   background: #779953;
 }
 
-li:nth-child(odd).odd {
+.square-wrapper:nth-child(odd).odd {
   background: #779953;
 }
 
-li:nth-child(odd).even {
+.square-wrapper:nth-child(odd).even {
   background: #edeed1;
 }
 
-li:nth-child(even).odd {
+.square-wrapper:nth-child(even).odd {
   background: #edeed1;
 }
 
 .square {
   position: relative;
-  list-style-type: none;
 }
 
 .clicked {
@@ -100,7 +100,7 @@ li:nth-child(even).odd {
   height: 100%;
 }
 
-#chessboard-list {
+#chessboard {
   background-color: #333;
   display: flex;
   justify-content: stretch;
@@ -117,7 +117,7 @@ li:nth-child(even).odd {
 }
 
 @media only screen and (min-device-width: 280px) and (max-device-width: 600px) {
-  #chessboard-list {
+  #chessboard {
     width: min(70vw, 70vh);
     height: min(70vw, 70vh);
     margin: 8px;
