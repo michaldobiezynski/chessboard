@@ -48,11 +48,6 @@ export default {
       let classes =
         square === "odd" ? `odd square ${index}` : `even square ${index}`;
 
-      if (index === 0) classes += " top-left";
-      if (index === 7) classes += " top-right";
-      if (index === 56) classes += " bottom-left";
-      if (index === 63) classes += " bottom-right";
-
       return classes;
     },
   },
@@ -105,20 +100,6 @@ li:nth-child(even).odd {
   height: 100%;
 }
 
-.top-left {
-  border-top-left-radius: 4px;
-}
-.top-right {
-  border-top-right-radius: 4px;
-}
-
-.bottom-left {
-  border-bottom-left-radius: 4px;
-}
-.bottom-right {
-  border-bottom-right-radius: 4px;
-}
-
 #chessboard-list {
   background-color: #333;
   display: flex;
@@ -131,6 +112,8 @@ li:nth-child(even).odd {
   margin: 20px;
   padding: 0;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
