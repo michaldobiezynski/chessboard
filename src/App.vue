@@ -1,18 +1,12 @@
 <template>
-  <!-- Main app container -->
   <div id="app">
-    <!-- Flex container to arrange chessboard and sidebar columns -->
     <div class="flex-container">
-      <!-- Column for chessboard -->
       <div class="flex-column chessboard-column">
-        <!-- Chessboard component with click event handler -->
         <div class="chessboard-wrapper">
           <chessboard @onSquareClick="handleSquareClicked" />
         </div>
       </div>
-      <!-- Column for sidebar -->
       <div class="flex-column sidebar-column">
-        <!-- Sidebar component with clicked squares prop -->
         <sidebar :clicked-squares="clickedSquares" />
       </div>
     </div>
@@ -30,12 +24,10 @@ export default {
   },
   data() {
     return {
-      // Array to hold clicked square coordinates
       clickedSquares: [],
     };
   },
   methods: {
-    // Click event handler for chessboard component
     handleSquareClicked(squares) {
       this.clickedSquares = squares;
     },
@@ -56,12 +48,10 @@ body {
   justify-content: center;
 }
 
-/* Global styling for paragraphs */
 p {
   color: #fff;
 }
 
-/* Main app container */
 #app {
   display: flex;
   flex-direction: column;
@@ -69,7 +59,6 @@ p {
   padding: 0;
 }
 
-/* Flex container for chessboard and sidebar columns */
 .flex-container {
   display: flex;
   flex-grow: 1;
@@ -77,7 +66,6 @@ p {
   width: 100%;
 }
 
-/* Flex column for chessboard */
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -85,50 +73,40 @@ p {
   height: 100%;
 }
 
-/* Styling for chessboard container */
 .chessboard-container {
   background-color: #504f4b;
 }
 
-/* Styling for sidebar container */
 .sidebar-container {
   background-color: #3e3d39;
 }
 
-/* Styling for chessboard wrapper */
 .chessboard-wrapper {
   flex-grow: 1;
 }
 
-/* Media queries for mobile devices */
 @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
-  /* Flex container to stack chessboard and sidebar columns */
   .flex-container {
     flex-direction: column;
   }
 
-  /* Styling for chessboard container */
   .chessboard-container {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
 }
 
-/* Media queries for desktop devices */
 @media (min-width: 600px) {
-  /* Main app container */
   #app {
     flex-direction: row;
   }
 
-  /* Styling for chessboard container */
   .chessboard-container {
     flex-basis: 0;
     flex-grow: 1;
     padding-bottom: 0;
   }
 
-  /* Styling for sidebar container */
   .sidebar-container {
     flex-basis: 0;
     flex-grow: 1;
